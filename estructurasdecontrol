@@ -40,8 +40,20 @@ public class EstructuradeContr {
             System.out.println("*****Menu de opciones****");
             System.out.println("1. Clasificación de edad");
             System.out.println("2. Alcancia");
+            System.out.println("10. Salir");
             System.out.print("Ingrese opcion: ");
-            sn.nextInt();
+            opc=sn.nextInt();
+            
+            switch(opc){
+                case 1:
+                    //solicitar la edad al usuarios
+                    System.out.println("Ingrese la edad");
+                    edad=sn.nextInt();
+                break;
+                default:
+                    System.err.println("Opcion Icorrecta , ingrese nuevamente la opcion");
+                break;
+            }
         }
     }    
 }
