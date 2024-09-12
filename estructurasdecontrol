@@ -31,9 +31,14 @@ public class EstructuradeContr {
        //declaración de variables
        int edad,opc;
        int saldo=0,ingresardinero;
-       //entrad de datos
-       
+       //entrad de datos       
         Scanner sn =  new Scanner(System.in);
+        
+        //menu de opciones
+        
+        System.out.println("*****Menu de opciones****");
+        System.out.println("1. Clasificación de edad");
+        System.out.println("2. Alcancia");
     }
     
 }
