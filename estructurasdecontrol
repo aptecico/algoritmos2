@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package estructuradecontr;
+
+/**
+ *
+ * @author German
+ */
+public class EstructuradeContr {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       /**
+        * Crear un menú de opciones donde se realice lo siguiente
+        * 1. según la edad definir si es 
+            * niñez =>0-12
+            * adolescente=>13-17,
+            * adulto joven=>18 a 29 
+            * adulto=>30-60
+            * adulto mayor=> 61
+         2. Alcancía
+         3. Salir
+        */
+       
+       //declaración de variables
+       int edad,opc;
+       int saldo=0,ingresardinero;
+    }
+    
+}
