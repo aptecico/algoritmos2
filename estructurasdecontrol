@@ -68,10 +68,14 @@ public class EstructuradeContr {
                 break;
                 case 2:
                     System.out.println("***Opcion alcancia***");
+                    //mostrar el saldo en pantalla
                     System.out.print("Su saldo es: "+saldo);
-                    System.out.println("¿Desea ingresar dinero? s/n");
-                     String ingresardiner=sn.next();
-                     if(ingresardiner.equals('s')){
+                    //solicitar si quieren ingresar dinero o NO
+                    System.out.print("\n ¿Desea ingresar dinero? s/n");
+                    //la opcion trim es para eliminar espacios 
+                    String ingresar=sn.next().trim();
+                    //condición para verificar que ingreso el usuario
+                     if(ingresar.equalsIgnoreCase("s")){
                          System.out.println("Ingrese dinero");
                          ingresardinero=sn.nextInt();
                          //actualizar el saldo
