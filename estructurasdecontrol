@@ -52,7 +52,10 @@ public class EstructuradeContr {
                     if(edad<=12){
                         System.out.println("La edad ingresada "
                                 +edad+" pertenece a la categoria Niñez");
-                    }
+                    } else if(edad<=17){
+                        System.out.println("La edad ingresada "
+                                +edad+" pertenece a la categoria Adolescente");
+                    } 
                 break;
                 default:
                     System.err.println("Opcion Icorrecta , ingrese nuevamente la opcion");
