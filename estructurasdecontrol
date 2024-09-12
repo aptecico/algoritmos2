@@ -55,7 +55,35 @@ public class EstructuradeContr {
                     } else if(edad<=17){
                         System.out.println("La edad ingresada "
                                 +edad+" pertenece a la categoria Adolescente");
-                    } 
+                    } else if(edad<=29){
+                        System.out.println("La edad ingresada "
+                                +edad+" pertenece a la categoria Adulto Joven");
+                    } else if(edad<=60){
+                        System.out.println("La edad ingresada "
+                                +edad+" pertenece a la categoria Adulto");
+                    } else{
+                        System.out.println("La edad ingresada "
+                                +edad+" pertenece a la categoria Adulto Mayor");
+                    }
+                break;
+                case 2:
+                    System.out.println("***Opcion alcancia***");
+                    System.out.print("Su saldo es: "+saldo);
+                    System.out.println("¿Desea ingresar dinero? s/n");
+                     String ingresardiner=sn.next();
+                     if(ingresardiner.equals('s')){
+                         System.out.println("Ingrese dinero");
+                         ingresardinero=sn.nextInt();
+                         //actualizar el saldo
+                         saldo+=ingresardinero; //saldo=saldo+ingresardinero;
+                     }else{
+                         System.out.println("Regresando al menu de opciones");
+                     }
+                break;
+                case 10:
+                    //cambiar de valor la varibale boleana
+                    salir=false;
+                    System.out.println("Gracias por utilizar nuestro programa");
                 break;
                 default:
                     System.err.println("Opcion Icorrecta , ingrese nuevamente la opcion");
