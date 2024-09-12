@@ -49,6 +49,10 @@ public class EstructuradeContr {
                     //solicitar la edad al usuarios
                     System.out.println("Ingrese la edad");
                     edad=sn.nextInt();
+                    if(edad<=12){
+                        System.out.println("La edad ingresada "
+                                +edad+" pertenece a la categoria Niñez");
+                    }
                 break;
                 default:
                     System.err.println("Opcion Icorrecta , ingrese nuevamente la opcion");
