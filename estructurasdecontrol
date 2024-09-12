@@ -4,6 +4,8 @@
  */
 package estructuradecontr;
 
+import java.util.Scanner;
+
 /**
  *
  * @author German
@@ -29,6 +31,9 @@ public class EstructuradeContr {
        //declaración de variables
        int edad,opc;
        int saldo=0,ingresardinero;
+       //entrad de datos
+       
+        Scanner sn =  new Scanner(System.in);
     }
     
 }
