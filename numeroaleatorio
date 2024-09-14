@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package adivinanumero;
+
+import java.util.Random;
+import java.util.Scanner;
+
+/**
+ *
+ * @author German
+ */
+public class Adivinanumero {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Definición de variables
+        int numeroUsuario;
+        //crear el numero random
+        Random num_random=new Random();
+        int numero_random=num_random.nextInt(100);
+        //variable para mantener mostrando en el ciclo
+        boolean salir=true;
+        //usuario ingresar por teclado
+        Scanner leer=new Scanner(System.in);
+        System.out.println(numero_random);
+        while(salir){
+            //solictar el numero al usuario
+            System.out.print("Ingrese numero: ");
+            //capturar  el numero que ingreso el usuario
+            numeroUsuario=leer.nextInt();
+            //compara el numero ingresado si esta entre 1 y 100
+            if(numeroUsuario>=1&&numeroUsuario<=100){
+                //compara el numero ingresado con el numero random
+                if(numeroUsuario==numero_random){
+                    System.out.println("Felicidades Ganaste");
+                    salir=false;
+                }else{
+                    //en caso de que no adivine el numero
+                    System.out.println("Sigue intentando");
+                }
+            }else{
+                System.out.print("El numero ingresado debe estar entre 1 y 100");
+            }
+        }
+    }
+    
+}
