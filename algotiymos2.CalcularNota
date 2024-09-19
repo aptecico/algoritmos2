@@ -1,0 +1,59 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package algoritmo2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author German
+ */
+public class CalcularNota {
+    //crear todas las funciones que requiera
+    //varios tipos de fdefinicion de funciones
+    /*
+    public => publica , puedo acceder desde donde sea
+    private => solo del archivo donde esta se puede utilizar
+    protected => uso y exclusivante una funcion en particular
+    **/
+    /*
+        tipo de funciones , según el retorno de estas
+        int,float,string=> dependiendo lo que seduelva
+        void=> si no se devuelve nada
+    
+    */
+    
+    public double notaFinal(double nota1,double nota2,double nota3){
+        //definición de variables
+        double nota1f=nota1;
+        double nota2f=nota2;
+        double nota3f=nota3;
+        double resultado=0.0;
+        //calcular la nota fina
+        resultado=(nota1f+nota2f+nota3f)/3;
+        
+        return resultado;
+    }
+    
+    //funcion par acalcular nota final sin parametros
+    
+    public void notaFinal2(Scanner leer){
+        //declaración de variables
+     double nota1,nota2,nota3,resultado;
+     
+        System.out.print("Ingrese nota 1: ");
+        nota1=leer.nextDouble();
+        System.out.print("Ingrese nota 2: ");
+        nota2=leer.nextDouble();
+        System.out.print("Ingrese nota 3: ");
+        nota3=leer.nextDouble();
+        //hacer el calculo de las notas
+        resultado=(nota1+nota2+nota3)/3;
+        //imprir en pantalla el resultado
+        System.out.println("====================");
+        System.out.println("La nota final es:"+resultado);
+        System.out.println("====================");
+    }
+}
