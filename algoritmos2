@@ -1,0 +1,49 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package algoritmo2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author German
+ */
+public class Algoritmo2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //declaración de variables
+        int opcion=0; //variable que ingresa el usuario
+        boolean salir=true;
+        //varibles de las notas
+        double nota1,nota2,nota3,notafinal;
+        //ingreso por usuario
+        Scanner leer = new Scanner(System.in);
+       
+        while(salir){
+            System.out.println("1. Calculo de notas");
+            System.out.println("100. Salir");
+            System.out.print("Ingrese opcion: ");
+            opcion= leer.nextInt();
+            
+            switch (opcion) {
+                case 1:
+                    
+                break;
+                case 100:
+                    salir=false;
+                    System.out.println("Gracias por utilizar nuestro progama");
+                   break;
+                default:
+                       System.out.println("Error al ingresar");
+                break;
+            }
+        }
+        
+    }
+    
+}
