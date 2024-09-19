@@ -1,0 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package algoritmo2;
+
+/**
+ *
+ * @author German
+ */
+public class AreaTriangulo {
+    
+    public double areaTriangulo(double  base,double altura){
+        double basef=base;
+        double alturaf=altura;
+        double area=0.0;
+        
+        area=(basef*alturaf)/2;
+        
+        return area;
+    }
+}
