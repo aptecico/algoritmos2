@@ -22,15 +22,25 @@ public class Algoritmo2 {
         //varibles de las notas
         double nota1,nota2,nota3,notafinal;
         double base,altura,area;
+        int cantidadcaracteres=0;
+        
         //ingreso por usuario
         Scanner leer = new Scanner(System.in);
        //llamar a la clase y la funcion
         CalcularNota notas=new CalcularNota();
         //llmar a la clase Area Triangulo
         AreaTriangulo triangulo=new AreaTriangulo();
+        //lamar a la clase murcielago
+        Murcielago murcielago= new Murcielago();
+        //lara a la casle AcumuladorContador
+        AcumuladorContador ac= new AcumuladorContador();
         while(salir){
             System.out.println("1. Calculo de notas");
             System.out.println("2. Calculo de notas (Sin parametros)");
+            System.out.println("3. Área de un triangulo");
+            System.out.println("4. Encripctación Muercielago");
+            System.out.println("5. Encripctación Muercielago V2");
+            System.out.println("6. Acumuladores y contadores");
             System.out.println("100. Salir");
             System.out.print("Ingrese opcion: ");
             opcion= leer.nextInt();
@@ -67,6 +77,20 @@ public class Algoritmo2 {
                     System.out.println("EL promedio de notas es: "+area);
                     System.out.println("====================");
                  break;
+                case 4:
+                    //perdir el usario que ingrese la cantdidad que desea su contraseña
+                    System.out.println("Ingrese cantidad de caracteres  para su contraseña");
+                    cantidadcaracteres=leer.nextInt();
+                        //llamar a la función generaraContraseña
+                        
+                       String contrasenia=murcielago.generarContrasenia(cantidadcaracteres);
+                       
+                       System.out.println("Su contraseña es: "+contrasenia);
+                    break;
+                case 6:
+                    ac.Acumulador();
+                    ac.factorial();
+                break;
                 case 100:
                     salir=false;
                     System.out.println("Gracias por utilizar nuestro progama");
