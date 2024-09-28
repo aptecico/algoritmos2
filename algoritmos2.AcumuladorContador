@@ -1,106 +1,63 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package algoritmo2;
-
-import java.util.Scanner;
 
 /**
  *
  * @author German
  */
-public class Algoritmo2 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        //declaración de variables
-        int opcion=0; //variable que ingresa el usuario
-        boolean salir=true;
-        //varibles de las notas
-        double nota1,nota2,nota3,notafinal;
-        double base,altura,area;
-        int cantidadcaracteres=0;
+public class AcumuladorContador {
+    
+    //función acumulador con ciclo while
+    public void Acumulador(){
+        //crear la variable acumulador
+        int acumulador=0;
+        int numero=0; //control del ciclo
         
-        //ingreso por usuario
-        Scanner leer = new Scanner(System.in);
-       //llamar a la clase y la funcion
-        CalcularNota notas=new CalcularNota();
-        //llmar a la clase Area Triangulo
-        AreaTriangulo triangulo=new AreaTriangulo();
-        //lamar a la clase murcielago
-        Murcielago murcielago= new Murcielago();
-        //lara a la casle AcumuladorContador
-        AcumuladorContador ac= new AcumuladorContador();
-        while(salir){
-            System.out.println("1. Calculo de notas");
-            System.out.println("2. Calculo de notas (Sin parametros)");
-            System.out.println("3. Área de un triangulo");
-            System.out.println("4. Encripctación Muercielago");
-            System.out.println("5. Encripctación Muercielago V2");
-            System.out.println("6. Acumuladores y contadores");
-            System.out.println("100. Salir");
-            System.out.print("Ingrese opcion: ");
-            opcion= leer.nextInt();
-            
-            switch (opcion) {
-                case 1:
-                    //solicitar al usuario  que ingrese las notas
-                    System.out.print("Ingrese nota 1:");
-                    nota1=leer.nextDouble();
-                    System.out.print("Ingrese nota 2:");
-                    nota2=leer.nextDouble();
-                    System.out.print("Ingrese nota 3:");
-                    nota3=leer.nextDouble();
-                    
-                    //llamar a la funcion notaFinal
-                    notafinal=notas.notaFinal(nota1, nota2, nota3);
-                    System.out.println("====================");
-                    System.out.println("EL promedio de notas es: "+notafinal);
-                    System.out.println("====================");
-                break;
-                case 2:
-                    notas.notaFinal2(leer);
-                break;
-                case 3:
-                    //solicitar al usuario  que ingrese las notas
-                    System.out.print("Ingrese base:");
-                    base=leer.nextDouble();
-                    System.out.print("Ingrese altura:");
-                    altura=leer.nextDouble();
-                    
-                    //llamar a la funcion notaFinal
-                    area=triangulo.areaTriangulo(base,altura);
-                    System.out.println("====================");
-                    System.out.println("EL promedio de notas es: "+area);
-                    System.out.println("====================");
-                 break;
-                case 4:
-                    //perdir el usario que ingrese la cantdidad que desea su contraseña
-                    System.out.println("Ingrese cantidad de caracteres  para su contraseña");
-                    cantidadcaracteres=leer.nextInt();
-                        //llamar a la función generaraContraseña
-                        
-                       String contrasenia=murcielago.generarContrasenia(cantidadcaracteres);
-                       
-                       System.out.println("Su contraseña es: "+contrasenia);
-                    break;
-                case 6:
-                    ac.Acumulador();
-                    ac.factorial();
-                break;
-                case 100:
-                    salir=false;
-                    System.out.println("Gracias por utilizar nuestro progama");
-                   break;
-                default:
-                       System.out.println("Error al ingresar,Nuevamente ingrese el numero que aprece en el menú");
-                break;
-            }
+        while(numero<10){
+            acumulador=acumulador+numero;
+            //incrementar la variable numero en 1 unidad
+            numero++;
+            System.out.println("EL valor del acumulador es: "+acumulador);
         }
+    }
+    //funcion para factorial
+    public void factorial(){
+        //crear la variable acumulador
+        int acumulador=1;
+        int numero=1; //control del ciclo
         
+        while(numero<=5){
+            acumulador=acumulador*numero;
+            //incrementar la variable numero en 1 unidad
+            
+            System.out.print(numero);
+            if(numero<5)System.out.print("x");
+            numero++;
+        }
+        System.out.println("="+acumulador);
     }
     
+    public void Asterisco(){
+        int acumulador=1;
+        int numero=0; //control del ciclo
+        int numero2=0;
+        int numerofinal=10;
+        
+        while(numero<numerofinal){
+            //incrementar la variable numero en 1 unidad
+           numero2=0; //se reinicia  en cada entrada al ciclo
+           //ciclo para imprimir los asteriscos
+            while(numero2<=numero){                
+                System.out.print("*");
+                numero2++;
+            }            
+            numero++;
+            //imprimir salto de linea
+            System.out.println("");
+        }
+        //System.out.println("="+acumulador);
+    }
 }
